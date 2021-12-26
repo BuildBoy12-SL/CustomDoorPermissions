@@ -56,7 +56,7 @@ namespace CustomDoorPermissions
         /// Gets or sets a collection of doors that scps can open.
         /// </summary>
         [Description("A collection of doors that scps can open.")]
-        public List<DoorType> ScpAccess { get; set; } = new List<DoorType>
+        public DoorType[] ScpAccess { get; set; } =
         {
             DoorType.Scp106Primary,
             DoorType.Scp106Secondary,

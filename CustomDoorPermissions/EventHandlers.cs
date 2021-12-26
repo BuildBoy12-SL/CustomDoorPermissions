@@ -28,7 +28,7 @@ namespace CustomDoorPermissions
         /// <inheritdoc cref="Exiled.Events.Handlers.Player.OnInteractingDoor(InteractingDoorEventArgs)"/>
         public void OnInteractingDoor(InteractingDoorEventArgs ev)
         {
-            if (ev.Player.IsScp && plugin.Config.ScpAccess.Contains(ev.Door.Type))
+            if (ev.Player.IsScp && !ev.Door.IsLocked && plugin.Config.ScpAccess.Contains(ev.Door.Type))
                 ev.IsAllowed = true;
         }
 
