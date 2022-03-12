@@ -35,7 +35,7 @@ namespace CustomDoorPermissions
         /// <inheritdoc cref="Exiled.Events.Handlers.Server.OnWaitingForPlayers()"/>
         public void OnWaitingForPlayers()
         {
-            foreach (Door door in Map.Doors)
+            foreach (Door door in Door.List)
             {
                 foreach (var kvp in plugin.Config.Permissions)
                 {
